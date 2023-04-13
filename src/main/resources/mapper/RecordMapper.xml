@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org._2ndelement.autorunner.mapper.RecordMapper">
+
+    <resultMap id="BaseResultMap" type="org._2ndelement.autorunner.entity.Record">
+            <id property="id" column="id" jdbcType="OTHER"/>
+            <result property="proxyUser" column="proxy_user" jdbcType="OTHER"/>
+            <result property="time" column="time" jdbcType="TIMESTAMP"/>
+            <result property="status" column="status" jdbcType="SMALLINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,proxy_user,time,
+        status
+    </sql>
+</mapper>

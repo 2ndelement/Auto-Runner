@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>验证码</title>
+    <style>
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        .card .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+            color: #007bff;
+        }
+        .card .code {
+            font-size: 48px;
+            font-weight: bold;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin-bottom: 20px;
+            display: inline-block;
+            background-color: #fff;
+        }
+        .card .desc {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="card">
+        <div class="title">您的注册验证码</div>
+        <div class="code" th:text="${code}"></div>
+        <div class="desc" th:text="'您正在注册 ' + ${platform} + '，该验证码 ' + ${expire} + ' 内有效。'"></div>
+    </div>
+</div>
+</body>
+</html>

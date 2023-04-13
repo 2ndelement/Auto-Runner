@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: autorunner
+  datasource:
+    url: jdbc:postgresql://2ndelement.space:5432/autorunner
+    username: autorunner
+    password: EH6ftd3iYXrA
+    driver-class-name: org.postgresql.Driver
+  sql.init.schema-locations: classpath:db/schema.sql
+  data.redis:
+    host: localhost
+    port: 6379
+    password:
+  mail:
+    host: smtp.163.com
+    port:
+    username: noreply_2ndelement@163.com
+    password: LDQTXSFENRCPUBQY
+    protocol: smtp
+    default-encoding: UTF-8
+    properties:
+      mail.smtp:
+        auth: true
+        starttls:
+          enable: true
+          required: true
+          port: 465
+
+jwt:
+  secret: vN$c1*#p%c8T%WwGO_9tjs9v#0D1ekM(M0Jk^!0swV)n7T$_ad*$'@$QP3d4x8U0NH
+  expiration: 604800
+
+server:
+  port: 8080
+
+app:
+  name: AutoRunner
+  verify-code:
+    expiration: 300
+    email:
+      subject: AutoRunner - 您的注册验证码
+
+
+
